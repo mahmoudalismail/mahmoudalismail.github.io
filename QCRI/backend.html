@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Backend - Visualizing Progression Tree to Root Out Cancer</title>
+        <!-- mobile first -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- bootstrap links -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/ripples.min.css" rel="stylesheet">
+        <link href="css/material-wfont.min.css" rel="stylesheet">
+        <!-- custom page style -->
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    </head>
+
+    <body style="background: #fff">
+        <div class="container-fluid">
+            <!-- Your site -->
+            
+            <a name="head"></a>
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-header">
+                        <h1>QCRI - Visualizing Progression Tree to Root out Cancer</h1>
+                    </div>
+                </div>
+            </div>
+            
+
+                <div class="row">
+                    <div class="navbar navbar">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="active navbar-brand" href="index.html">Home</a>
+                        </div>
+
+                        <div class="navbar-collapse collapse navbar-responsive-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="about.html">About Project</a></li>
+                                <li class="active"><a href="javascript:void(0)">Backend</a></li>
+                                <li><a href="frontend.html">Frontend</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="jumbotron">
+                    	<div class="page-header">
+							<h2>Backend Documentation</h2>	
+                    	</div>
+                        
+                    	<div class="list-group">
+                    		    <div class="list-group-item">
+							        <div class="row-action-primary">
+							            <a href="#fileStructure"><i class="mdi-image-filter-none"></i></a>
+							    	</div>
+								    <div class="row-content">
+								            <h2 class="list-group-item-heading"><a href="#fileStructure">File Structure</a></h2>
+								            <p class="list-group-item-text">Server file structure</p>
+									</div>
+								</div>
+
+								<div class="list-group-separator"></div>
+                    		    
+                    		    <div class="list-group-item">
+							        <div class="row-action-primary">
+							            <a href="#dataRepresentation"><i class="mdi-image-filter-none"></i></a>
+							    	</div>
+								    <div class="row-content">
+								            <h2 class="list-group-item-heading"><a href="#dataRepresentation">Data Representation</a></h2>
+								            <p class="list-group-item-text">Data representation and structure</p>
+									</div>
+								</div>
+
+								<div class="list-group-separator"></div>
+
+								<div class="list-group-item">
+							        <div class="row-action-primary">
+							            <a href="#fileParser"><i class="mdi-image-filter-none"></i></a>
+							        </div>
+								    <div class="row-content">
+								            <h2 class="list-group-item-heading"><a href="#fileParser">File Parser</a></h2>
+								            <p class="list-group-item-text">Parses the uploaded files</p>
+									</div>
+								</div>
+
+								<div class="list-group-separator"></div>
+
+								<div class="list-group-item">
+							        <div class="row-action-primary">
+							            <a href="#kmeans"><i class="mdi-image-filter-none"></i></a>
+							        </div>
+								    <div class="row-content">
+								            <h2 class="list-group-item-heading"><a href="#kmeans">K-means Algorithm</a></h2>
+								            <p class="list-group-item-text">K-means API and usage</p>
+									</div>
+								</div>
+
+								<div class="list-group-separator"></div>
+
+								<div class="list-group-item">
+							        <div class="row-action-primary">
+							            <a href="#CHL"><i class="mdi-image-filter-none"></i></a>
+							        </div>
+								    <div class="row-content">
+								            <h2 class="list-group-item-heading"><a href="#CHL">Competitive Hebbian Learning</a></h2>
+								            <p class="list-group-item-text">Tree/Graph generation</p>
+									</div>
+								</div>
+
+								<div class="list-group-separator"></div>
+
+								<div class="list-group-item">
+							        <div class="row-action-primary">
+							            <a href="#projection"><i class="mdi-image-filter-none"></i></a>
+							        </div>
+								    <div class="row-content">
+								            <h2 class="list-group-item-heading"><a href="#projection">Data Projection</a></h2>
+								            <p class="list-group-item-text">Data Projection API and usage</p>
+									</div>
+								</div>
+
+								<div class="list-group-separator"></div>
+
+								<div class="list-group-item">
+							        <div class="row-action-primary">
+							            <a href="#"><i class="mdi-image-filter-none"></i></a>
+							        </div>
+								    <div class="row-content">
+								            <h2 class="list-group-item-heading"><a href="#">Exporter</a></h2>
+								            <p class="list-group-item-text">Export the computed data to re-use</p>
+									</div>
+								</div>																									
+								<div class="list-group-separator"></div>
+
+								<div class="list-group-item">
+							        <div class="row-action-primary">
+							            <a href="#"><i class="mdi-image-filter-none"></i></a>
+							        </div>
+								    <div class="row-content">
+								            <h2 class="list-group-item-heading"><a href="#">Utilities</a></h2>
+								            <p class="list-group-item-text">Functions used all over the project</p>
+									</div>
+								</div>																
+						</div>
+
+						<a name="fileStructure"></a>
+                        <div class="page-header"><h2>File Structure</h2></div>
+	                        <p>This is the file structure of the main directory: </p>
+	                        <!-- should be formatted this way to display correctly -->
+							<pre><code class="language-bash" data-lang="bash">QCRI/
+&#9500;&#9472;&#9472; bin/
+&#9474;   &#9500;&#9472;&#9472; www
+&#9474;   &#9500;&#9472;&#9472; RUNS THE SERVER
+&#9500;&#9472;&#9472; docs/
+&#9474;   &#9500;&#9472;&#9472; CONTAINS THE DOCS YOU ARE VIEWING RIGHT NOW
+&#9500;&#9472;&#9472; public/
+&#9474;   &#9500;&#9472;&#9472; ALL FILES PUBLICLY SERVED ARE STORED HERE
+&#9474;   &#9500;&#9472;&#9472; javascript/
+&#9474;   &#9500;&#9472;&#9472; stylesheets/
+&#9500;&#9472;&#9472; routes/
+&#9474;   &#9500;&#9472;&#9472; CONTAINS SERVER ROUTES AND ALGORITHMS
+&#9474;   &#9500;&#9472;&#9472; index.js
+&#9474;   &#9500;&#9472;&#9472; kmeans.js
+&#9474;   &#9500;&#9472;&#9472; tree.js
+&#9474;   &#9500;&#9472;&#9472; projection.js
+&#9474;   &#9500;&#9472;&#9472; file-parser.js
+&#9474;   &#9500;&#9472;&#9472; file-writer.js
+&#9474;   &#9500;&#9472;&#9472; redis-util.js
+&#9474;   &#9500;&#9472;&#9472; exporter.js
+&#9474;   &#9500;&#9472;&#9472; matrix_utils.js
+&#9500;&#9472;&#9472; views/
+&#9474;   &#9500;&#9472;&#9472; CONTAINS HTML PAGES THAT ARE SERVED TO THE USER
+&#9474;   &#9500;&#9472;&#9472; index.ejs
+&#9474;   &#9500;&#9472;&#9472; dataview.ejs
+&#9474;   &#9500;&#9472;&#9472; error.ejs
+&#9500;&#9472;&#9472; redis/
+&#9474;   &#9500;&#9472;&#9472; CONTAINS SCRIPTS THAT TAKE CARE OF REDIS
+&#9474;   &#9500;&#9472;&#9472; install_redis.sh
+&#9474;   &#9500;&#9472;&#9472; start_redis.sh
+&#9500;&#9472;&#9472; uploads/
+&#9474;   &#9500;&#9472;&#9472; CONTAINS UPLOADED FILES BY THE USER
+&#9492;&#9472;&#9472; app.js &#9472; SERVER CONFIGURATION FILE
+&#9492;&#9472;&#9472; package.json &#9472; DEPENDENCIES FILE
+&#9492;&#9472;&#9472; run_server.js &#9472; SCRIPT TO RUN THE SERVER
+</pre></code>
+
+                        <a name="dataRepresentation"></a>
+                        <div class="page-header"><h2>Data Representation</h2></div>
+                        	<h2>Point</h2>
+                        	<p>A point is represented as an array of integers/floats.</p>
+
+                        <a name="fileParser"></a>
+                        <div class="page-header"><h2>File Parser</h2></div>
+
+                        	<p>The file parser is a class called <code>FileParser</code>. It is used to parse the files the user 
+                        		uploads. The source code can be found inside <code>routes/file-parser.js</code>.</p>
+
+                            <h2>Class Methods</h2><br>
+                            <p>
+                            			The methods below are all public methods. <br><br>
+
+                            			<code>FileParser.parseData(filePath)</code><br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parses the data file, <code>*.dat</code> files,
+                            			and stores the result inside <code>this.dat</code> variable. <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Requires:</b> the file path of the data file <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Returns:</b> <code>this.dat</code>, contains the parsed data <br> <br>
+                            			
+                            			<code>FileParser.getSbp(filePath)</code><br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Filters the data using the subspace file, <code>*.sbp</code> files, and stores the result inside <code>this.sbp</code> variable. <br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Requires:</b> the file path of the data file <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Returns:</b> <code>this.sbp</code>, contains the filtered subspace <br> <br>	
+
+                            			<code>FileParser.getFts(filePath)</code><br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parses the features file, <code>*.fts</code> files, and stores the result inside <code>this.fts</code> variable. <br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Requires:</b> the file path of the data file <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Returns:</b> <code>this.fts</code>, contains the features <br> <br>
+
+										<code>FileParser.getTis(filePath)</code><br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parses the tissue file, <code>*.tis</code> files, and stores the result inside <code>this.tis</code> variable. <br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Requires:</b> the file path of the data file <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Returns:</b> <code>this.tis</code>, contains the tissues <br> <br>
+
+										<code>FileParser.getGrd(filePath)</code><br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parses the grade file, <code>*.grd</code> files, and stores the result inside <code>this.grd</code> variable. <br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Requires:</b> the file path of the data file <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Returns:</b> <code>this.grd</code>, contains the tissues <br> <br>
+
+										<code>FileParser.getInd(filePath)</code><br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parses the indicator features file, <code>*.ind</code> files, and stores the result inside <code>this.ind</code> variable. <br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Requires:</b> the file path of the data file <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Returns:</b> <code>this.ind</code>, contains the tissues <br> <br>
+
+										<code>FileParser.getTis(filePath)</code><br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parses the tissue file, <code>*.tis</code> files, and stores the result inside <code>this.tis</code> variable. <br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Requires:</b> the file path of the data file <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Returns:</b> <code>this.tis</code>, contains the tissues <br> <br>
+
+										<code>FileParser.parseSbp()</code><br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Parses the subspace depending on the features file and stores the result inside <code>this.dat</code> variable. <br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Requires:</b> none <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Returns:</b> <code>this.dat</code>, which contains the correctly parsed data <br>
+
+										<div class="alert alert-warning">
+    										This method will overwrite the <code>this.dat</code> variable
+										</div>
+
+                            			<p>
+                            				There are more unsuppored methods that needs to be implemented.
+                            			</p>
+                            </p>
+                            
+                            <h2>Class Properties</h2>
+<pre><code>
+	// data to be parsed from uploaded raw data
+	this.dat = []; // data file
+	this.sbp = []; // subspace file
+	this.tis = []; // tissue file
+	this.fts = []; // feature file
+	this.grd = []; // grade file
+	this.ind = []; // indicator file
+	this.dimension = ''; // dimension of the uploaded data
+
+	/*********
+	 * Variables below are unsuppored
+	 ********/
+
+	// data to be parsed from pre-computed data
+	// unzipped folder
+	this.unZipped = '';
+	// Kmeans data
+	this.centers = '';
+	this.dist2Clusters = '';
+	this.clusters = '';
+	// Tree data
+	this.tree = '';
+	// Projection data
+	this.projection = '';
+
+</code></pre>
+                            <h2>Usage</h2><br>
+                            <p>
+                            	Use the above methods in the following recommended sequence
+<pre><code>
+	var parser = new FileParser();
+
+	// parse the data
+	parser.parseData(filePathDat);
+
+
+	var sbp = parser.getSbp(filePathSbp);
+	var fts = parser.getFts(filePathFts);
+	var tis = parser.getTis(filePathTis);
+	var grd = parser.getGrd(filePathGrd);
+	var ind = parser.getInd(filePathInd);
+	var dim = parser.dimension;
+
+	// parses the subspace
+	var dat = parser.parseSbp();
+
+	// its safe to use the data now
+
+</code></pre>
+                            </p>
+
+                        <a name="kmeans"></a>
+                        <div class="page-header"><h2>K-means Algorithm</h2></div>
+							<p>The K-means algorithm is a class called <code>kmeans</code>. The source code can be found inside <code>routes/kmeans.js</code>.</p>                        
+                            
+						<h2>Class Methods</h2><br>
+                            <p>
+                            			The methods below are all public methods. <br><br>
+
+                            			<code>kmeans(data, numK, dim, tisNames)</code><br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Runs the kmeans algorithm on the data <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Requires:</b> <br> 
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>data</code>: array of points <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>numK</code>: number of prototypes <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>dim</code>: dimension of data <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>tisNames</code>: array containing the tissue names <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Returns:</b> An object of the following format <br>
+<pre><code>
+output: { "centers": [c1, c2,...,ck], // coordinates of the centers of the prototypes
+
+          "clusters": [ [pi, pi+1,...],...,[pi+4, pi+n,...] ], // 2D array containing the points closest to each cluster (which points belong to which cluster)
+
+          "dist2Clusters": [ [{cIndex: 1, dis: distance},...,{cIndex: k, dis: distance}],...], // 2D array containing the distances between each point and all clusters
+
+          "tisNames": [[tisX1, tisX2,...],...,[tisX45, tisX49]] // 2D array containing the tissue names of the points each cluster
+        }                            			
+</code></pre>
+                        	</p>
+
+                        <a name="CHL"></a>
+                        <div class="page-header"><h2>Competitive Hebbian Learning</h2></div>
+							<p>The Competitive Hebbian Learning (CHL) is used to generate a tree/graph using the data generated from the K-means algorithm. <br>
+								The CHL algorithm is a function called <code>genTree</code>. The source code can be found inside <code>routes/tree.js</code>
+							</p>
+
+							<h2>Main Function</h2><br>
+								<p>
+                            			<code>genTree(distances, numK)</code><br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Generates an undirected graph or sometimes a tree <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Requires:</b> <br> 
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>distances</code>: 2D array containing the distances between each point and all clusters generated by the Kmeans algorithm  <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>numK</code>: number of prototypes <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>dim</code>: dimension of data <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Returns:</b> An array of edges of the following format <br>
+<pre><code>
+output: [ {w: weight, n: [src, dest]},...]
+		w --> weight of the edge
+		src --> source node (int representing the number of the node)
+		dest --> destination node (int representing the number of the node)
+</code></pre>                            			
+								</p>
+                        <a name="projection"></a>
+                        <div class="page-header"><h2>Data Projection</h2></div>										
+                            <p></p>
+                        <!-- <p><a class="btn btn-primary btn-lg">Learn more</a></p> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div class="row">
+                <div class="footer">
+                    <a href="license.html">LICENSE</a> - <a href="contact.html">CONTACT</a>
+                </div>
+            </div>
+
+            <!-- go to the top button -->
+            <a href="#head" id="fixedButton" class="btn btn-info btn-fab btn-raised mdi-hardware-keyboard-arrow-up" ></a>
+        </div> <!-- end of container-fluid -->
+            
+            <!-- <div class="row"> -->
+               
+
+            <!-- <div class="row">
+                <h1>You can add your site here.</h1>
+
+                <h2>To ensure that material-design theme is working, check out the buttons below.</h2>
+
+                <h3 class="text-muted">If you can see the ripple effect on clicking them, then you are good to go!</h3>
+
+
+                <p class="bs-component">
+                    <a href="javascript:void(0)" class="btn btn-default">Default</a>
+                    <a href="javascript:void(0)" class="btn btn-primary">Primary</a>
+                    <a href="javascript:void(0)" class="btn btn-success">Success</a>
+                    <a href="javascript:void(0)" class="btn btn-info">Info</a>
+                    <a href="javascript:void(0)" class="btn btn-warning">Warning</a>
+                    <a href="javascript:void(0)" class="btn btn-danger">Danger</a>
+                    <a href="javascript:void(0)" class="btn btn-link">Link</a>
+                </p>
+            </div> -->
+
+            <!-- Your site ends -->
+            <!-- jQuery link -->
+            <script src="js/jquery-1.11.3.min.js"></script>
+            <!-- bootstrap links -->
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/ripples.min.js"></script>
+            <script src="js/material.min.js"></script>
+
+            <script>
+                $(document).ready(function() {
+                    $.material.init();
+                    console.log($(".container").css("width"))
+                });
+            </script>
+        <!-- </div> end of container div -->
+
+    </body>
+
+</html>

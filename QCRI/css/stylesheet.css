@@ -1,0 +1,13 @@
+.footer {
+	font-size: 10px;
+	text-align: center;
+	background: #E5E5E5;
+	height: 15px;
+
+}
+
+#fixedButton {
+	position: fixed;
+	bottom: 10px;
+	right: 15px;
+}
