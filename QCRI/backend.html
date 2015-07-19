@@ -44,7 +44,6 @@
                                 <li><a href="about.html">About Project</a></li>
                                 <li class="active"><a href="javascript:void(0)">Backend</a></li>
                                 <li><a href="frontend.html">Frontend</a></li>
-                                <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
 
@@ -70,7 +69,19 @@
 								</div>
 
 								<div class="list-group-separator"></div>
-                    		    
+
+                    		    <div class="list-group-item">
+							        <div class="row-action-primary">
+							            <a href="#routes"><i class="mdi-image-filter-none"></i></a>
+							    	</div>
+								    <div class="row-content">
+								            <h2 class="list-group-item-heading"><a href="#routes">Routes</a></h2>
+								            <p class="list-group-item-text">Server Routing and URLs</p>
+									</div>
+								</div>
+
+								<div class="list-group-separator"></div>
+
                     		    <div class="list-group-item">
 							        <div class="row-action-primary">
 							            <a href="#dataRepresentation"><i class="mdi-image-filter-none"></i></a>
@@ -133,10 +144,10 @@
 
 								<div class="list-group-item">
 							        <div class="row-action-primary">
-							            <a href="#"><i class="mdi-image-filter-none"></i></a>
+							            <a href="#exporter"><i class="mdi-image-filter-none"></i></a>
 							        </div>
 								    <div class="row-content">
-								            <h2 class="list-group-item-heading"><a href="#">Exporter</a></h2>
+								            <h2 class="list-group-item-heading"><a href="#exporter">Exporter</a></h2> <span class="label label-warning">Incomplete</span>  
 								            <p class="list-group-item-text">Export the computed data to re-use</p>
 									</div>
 								</div>																									
@@ -144,15 +155,15 @@
 
 								<div class="list-group-item">
 							        <div class="row-action-primary">
-							            <a href="#"><i class="mdi-image-filter-none"></i></a>
+							            <a href="#utils"><i class="mdi-image-filter-none"></i></a>
 							        </div>
 								    <div class="row-content">
-								            <h2 class="list-group-item-heading"><a href="#">Utilities</a></h2>
+								            <h2 class="list-group-item-heading"><a href="#utils">Utilities</a></h2>
 								            <p class="list-group-item-text">Functions used all over the project</p>
 									</div>
 								</div>																
 						</div>
-
+					</div>
 						<a name="fileStructure"></a>
                         <div class="page-header"><h2>File Structure</h2></div>
 	                        <p>This is the file structure of the main directory: </p>
@@ -194,6 +205,27 @@
 &#9492;&#9472;&#9472; run_server.js &#9472; SCRIPT TO RUN THE SERVER
 </pre></code>
 
+						<a name="routes"></a>
+                        <div class="page-header"><h2>Routes</h2></div>
+                        
+                        <p> Most of the URLs, which are called routes, are found inside <code>routes/index.js</code>
+                        </p>						
+                        <p>
+                    			<code>/</code><br>
+                    			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Renders the homepage <br>
+                    			<code>/uploads</code><br>
+                    			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Computes the results and renders the visualization box<br>
+                    			<code>/kUpdate</code><br>
+                    			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Runs the K means update and returns the result using AJAX <br>
+                    			<code>/download</code> <span class="label label-warning">Incomplete</span><br>
+                    			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exports all the files and returns a zip file (zips all the files together) <br>
+                    			<code>/projected</code><br>
+                    			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Projects the data and returns it using AJAX<br>
+                    			<code>/getData</code><br>
+                    			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Returns the data associated with the user in the browser (data stored inside redis) <br>
+                    			<code>/remUser</code><br>
+                    			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Removes the user from redis with all of the associated data<br>
+                        </p>
                         <a name="dataRepresentation"></a>
                         <div class="page-header"><h2>Data Representation</h2></div>
                         	<h2>Point</h2>
@@ -320,13 +352,14 @@
                             <p>
                             			The methods below are all public methods. <br><br>
 
-                            			<code>kmeans(data, numK, dim, tisNames)</code><br>
+                            			<code>kmeans(data, numK, dim, tisNames, centers)</code><br>
                             			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Runs the kmeans algorithm on the data <br>
                             			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Requires:</b> <br> 
                             			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>data</code>: array of points <br>
                             			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>numK</code>: number of prototypes <br>
                             			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>dim</code>: dimension of data <br>
                             			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>tisNames</code>: array containing the tissue names <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>centers (optional)</code>: already computed centers instead of randomly generating prototypes (used when updating the kmeans) <br>
                             			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Returns:</b> An object of the following format <br>
 <pre><code>
 output: { "centers": [c1, c2,...,ck], // coordinates of the centers of the prototypes
@@ -363,7 +396,38 @@ output: [ {w: weight, n: [src, dest]},...]
 </code></pre>                            			
 								</p>
                         <a name="projection"></a>
-                        <div class="page-header"><h2>Data Projection</h2></div>										
+                        <div class="page-header"><h2>Data Projection</h2></div>
+
+                        <a name="exporter"></a>
+                        <div class="page-header"><h2>Exporter</h2></div>
+                        <p>
+							The exporter is a class called <code>Exporter</code>. It is used to export the data computed and stored inside redis. The source code can be found inside <code>routes/exporter.js</code>.
+                        </p>
+                        <div class="alert alert-warning">
+    						This class is incomplete due to race conditions when zipping the files. <br>
+    						This class depends on <code>CSVwriter</code> that is found inside <code>router/file-writer.js</code> to output the files in a CSV format. The race condition occurs while writing the CSV files and trying to zip them together. As a result, the <code>Exporter</code> will zip empty files because while it is trying to zip the output, <code>CSVwriter</code> has not yet completed writing the files. <br>
+    						Please view the source code to better understand how it operates. I have had many takes on it but overcoming the race condition wasn't possible. I would be happy/curious to know if anyone could possibly find a solution.
+						</div>
+                        <h2>Main Function</h2><br>
+								<p>
+                            			<code>Exporter(user, writer)</code><br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exports all the computed data and stores them inside <code>tmp/user/</code> <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Requires:</b> <br> 
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>user</code>: current username  <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>writer</code>: writer to be used to export the data with (nnly writer available is <code>CSVwriter</code>) <br>
+                            			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Returns:</b> retuns nothing <br>
+                            	<div class="alert alert-warning">
+                            		Please view the source code to get a better idea of how it works
+                            	</div>
+                            	</p>
+
+                        <a name="utils"></a>
+                        <div class="page-header"><h2>Utilities</h2></div>
+                        <p>
+							There are two utility files which include simple functions that are used all over the project. <br>
+							The first file is <code>routes/matrix_utils.js</code> which has simple matrix utils functions that are used when projecting the data. <br>
+							The second file is <code>routes/redis-util.js</code> which has redis utils functions, they could be used for reference. 
+                        </p>    	
                             <p></p>
                         <!-- <p><a class="btn btn-primary btn-lg">Learn more</a></p> -->
                     </div>
@@ -373,7 +437,7 @@ output: [ {w: weight, n: [src, dest]},...]
             <!-- footer -->
             <div class="row">
                 <div class="footer">
-                    <a href="license.html">LICENSE</a> - <a href="contact.html">CONTACT</a>
+                    <a href="license.html">LICENSE</a> - <a href="mailto:mahmoud.alismail@gmail.com">CONTACT</a>
                 </div>
             </div>
 
