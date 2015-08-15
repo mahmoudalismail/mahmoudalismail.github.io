@@ -1,0 +1,137 @@
+/* Space out content a bit */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #F0F0F2;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+.container-content {
+  background-color: #FFFFFF;
+  border-color: #E7E7E7;
+  
+  border-radius: 6px;
+  padding-top: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+}
+
+
+/* Custom page header */
+.header {
+  /*border-bottom: 1px solid #e5e5e5;*/
+
+}
+
+
+/*Custom page footer*/
+.footer{
+  /*border-top: 1px solid #e5e5e5;*/
+  color: #565659;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.heart {
+  color: #E64C66;
+}
+
+
+/* START Navbar Customization */
+
+/* overwrites the original css */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #333;
+}
+
+/* overwrites the original css */
+.navbar-default .navbar-toggle {
+  border-color: #328DB2;
+}
+
+/* overwrites the original css */
+.navbar-default .navbar-brand {
+  color: #328DB2;
+}
+
+.navbar-default .navbar-brand:hover{
+  color: #2F9ECC;
+}
+
+.navbar-default .navbar-nav>.active>a {
+  background-color: #328DB2;
+  color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus {
+  background-color: #2F9ECC;
+  color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color: #2F9ECC;
+}
+
+.navbar {
+  border-radius: 6px;
+}
+
+/* maximizes icon once hovering */
+.max-hover:hover {
+  font-size: 2.1em;
+}
+
+/* END Navbar Customization */
+
+.jumbotron img{
+  width: 160px;
+  height: 160px;
+  margin-bottom: 20px;
+}
+
+.jumbotron {
+  background-color: #FFFFFF;
+  border-color: #E7E7E7;
+  /*
+  #AEAEAE;
+  */
+}
+
+/* overwrites the original navbar-default css */
+.navbar-default {
+  background-color: #FFFFFF;
+}
+
+.social {
+  font-size: 2em; /* 2em works with my phone */
+  color: #E64C66;
+}
+
+a {
+  color: #E64C66;
+}
+
+a:hover {
+    color: #E64C66;
+}
+a:visited {
+  color: #A13547;
+}
+
+.social a {
+  text-decoration: none;
+}
