@@ -1,0 +1,29 @@
+{
+  "name": "personal_website",
+  "version": "2.0.0",
+  "description": "This is Mahmoud Alismail personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahmoudalismail/mahmoudalismail.github.io.git"
+  },
+  "keywords": [
+    "personal",
+    "website",
+    "mahmoud",
+    "alismail",
+    "state-of-the-art"
+  ],
+  "author": "Mahmoud Alismail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahmoudalismail/mahmoudalismail.github.io/issues"
+  },
+  "homepage": "https://github.com/mahmoudalismail/mahmoudalismail.github.io#readme",
+  "dependencies": {
+    "bower": "^1.7.9"
+  }
+}
