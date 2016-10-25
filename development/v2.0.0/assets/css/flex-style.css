@@ -1,0 +1,39 @@
+.container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item {
+    width: 100px;
+    height: 200px;
+    margin: auto;
+}
+
+.navbar-left {
+    width: 50%;
+    height: 5rem;
+    text-align: left;
+    font-size: 26px;
+}
+
+.navbar-right {
+    width: 50%;
+    height: 5rem;
+    text-align: right;
+    font-size: 20px;
+}
+
+.aboutme {
+    width: 100%;
+}
+
+.projects {
+    width: 100%;
+}

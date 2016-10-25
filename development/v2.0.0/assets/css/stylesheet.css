@@ -1,0 +1,13 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+hr {
+    width: 50vw;
+    height: 0.5vh;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: #FF1744;
+
+}
