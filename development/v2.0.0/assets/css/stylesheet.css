@@ -1,12 +1,10 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #E5E5E5;
+    /*background-color: #E5E5E5;*/
+    background-color: #FFFFFF;
+    /*color: #333333;*/
     color: #333333;
 }
-
-/*.section-header {
-    color: #E5E5E5;
-}*/
 
 hr {
     width: 50vw;
