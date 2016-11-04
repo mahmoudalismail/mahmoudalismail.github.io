@@ -50,3 +50,14 @@ a {
     padding-right: 0.5em;
     padding-left: 0.5em;
 }
+
+@media only screen and (min-width:768px) {
+
+    .img-circle {
+        width: 40%;
+    }
+
+    hr {
+        visibility: hidden;
+    }
+}
