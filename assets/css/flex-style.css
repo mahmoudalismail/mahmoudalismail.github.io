@@ -1,0 +1,150 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+[class*="col-"] {
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    /*padding-right: 0.2em;
+    padding-left: 0.2em;*/
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+
+    /*padding-left: 1em;
+    padding-right: 1em;*/
+}
+
+
+/* http://www.w3schools.com/howto/howto_js_topnav.asp */
+
+
+/* Remove margins and padding from the list, and add a black background color */
+
+ul.top-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* prev color #333 */
+    /*background-color: #19add8;*/
+    /*background-color: #890002;*/
+    /*background-color: #00c416;*/
+    /*background-color: #002F87;*/
+    /*background-color: #004f91; favorite */
+    /*background-color: #008C8E;*/
+    /*background-color: #eaaa13;*/
+    background-color: #104846;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Float the list items side by side */
+
+ul.top-nav li {
+    float: left;
+}
+
+ul.top-nav li.float-right {
+    float: right;
+}
+
+
+/* Style the links inside the list items */
+
+ul.top-nav li a {
+    display: inline-block;
+    /*color: #f2f2f2;*/
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+ul.top-nav li.navbar-title a {
+    font-size: 22px;
+}
+
+ul.top-nav li.navbar-icon a {
+    font-size: 22px;
+}
+/* Change background color of links on hover */
+
+ul.top-nav li a:hover {
+    /*background-color: #555;*/
+    /*background-color: #eaaa13; favorite orange */
+    background-color: #27AFAB;
+}
+
+
+/* Hide the list item that contains links and only show button small screens */
+
+ul.top-nav li.navbar-link {
+    display: none;
+}
+
+
+/* The "responsive" class is added to the topnav with JavaScript when the user
+clicks on the icon. This class makes the topnav look good on small screens */
+
+ul.top-nav.responsive {
+    box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+ul.top-nav.responsive li.navbar-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+ul.top-nav.responsive li {
+    float: none;
+    display: inline;
+
+}
+
+ul.top-nav.responsive li.navbar-link {
+    width: 100%;
+}
+ul.top-nav.responsive li.navbar-link a {
+    width: 100%;
+    text-align: left;
+}
+ul.top-nav.responsive li.navbar-link {
+    display: block;
+    text-align: left;
+}
+
+
+/* When the screen is larger than 768 pixels wide, show all the items.
+    And hide button that shows the navbar links */
+
+@media only screen and (min-width:768px) {
+    ul.top-nav li.navbar-link {
+        display: inline-block;
+    }
+    ul.top-nav li.navbar-icon {
+        display: none;
+    }
+
+    .col-1{ width: 16.66%; }
+    .col-2{ width: 33.33%; }
+    .col-3{ width: 50%;    }
+    .col-4{ width: 66.66%; }
+    .col-5{ width: 83.33%; }
+    .col-6{ width: 100%;   }
+
+    .container {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+}
