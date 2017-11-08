@@ -18,16 +18,14 @@
 
         <div class="col-12">
             <ul class="top-nav" id="mytopnav">
+                <!-- @TODO: order of the items changes on smaller screen sizes -->
+                <!-- @TODO: button background colors get stuck on smaller screen sizes -->
                 <li class="navbar-title"><a href="#top">Mahmoud Alismail</a></li>
                 <li class="navbar-link float-right"><a href="http://github.com/mahmoudalismail" target="_blank">Github</a></li>
                 <li class="navbar-link float-right"><a href="assets/mahmoud_alismail_resume.pdf" target="_blank">Resume</a></li>
                 <li class="navbar-link float-right"><a href="#projects">Projects</a></li>
                 <li class="navbar-link float-right"><a href="#about">About</a></li>
-                <!-- <li class="navbar-link float-right"><a href="#research">Research</a></li> -->
-                
                 <li class="navbar-icon float-right">
-
-                    <!--  -->
                     <a href="javascript:void(0);" onclick="show_navbar_links()">&#9776;</a>
                 </li>
             </ul>
@@ -38,19 +36,26 @@
 
 
         <div class="col-6 center">
-            <img src="assets/img/mahmoud_alismail_coffee_mug.png" alt="Mahmoud Alismail" class="img-circle" />
+            <!-- @TODO: compress photo  -->
+            <img src="assets/img/mahmoud_alismail_bookcover.jpg" alt="Mahmoud Alismail" class="img-circle" />
         </div>
 
 
         <div class="col-6 center">
             <p>
-                <span class="my-name">Mahmoud Alismail</span> <br> Computer Science senior @ <a href="http://cs.cmu.edu" target="_blank">Carnegie Mellon</a> <br>
-            </p>
+                <span class="my-name">Mahmoud Alismail</span> <br>
+                Research Associate <br>
+                <a href="https://www.lti.cs.cmu.edu" target="_blank">Languages Technologies Insitutue (LTI)</a> <br>
+                <a href="http://cs.cmu.edu" target="_blank">Carnegie Mellon University</a>
+                <br>
+			</p>
+			<!--
             <p>
                 <a href="javascript: none">
                     I am availabe for full-time recruitment, contact me at mahmoud.alismail@gmail.com
                 </a>
-            </p>
+			</p>
+			-->
             <p>
                 <a class="social-icons" href="http://github.com/mahmoudalismail" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
                 <a class="social-icons" href="https://twitter.com/mahmoudalismail" target="_blank"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
@@ -63,18 +68,19 @@
             <h2>About</h2>
         </div>
         <div class="col-6">
-            <p>
-                I am a Computer Science senior at
-                <a href="http://cs.cmu.edu">Carnegie Mellon University</a> with a
-                minor in Mathematical Sciences. I am a very passionate software engineer
-                and mathematician. I enjoy solving challenging problems that make a difference.
-            </p>
+			<p>
+				I am a research associate and software engineer at 
+				<a href="https://www.lti.cs.cmu.edu" target="_blank">Languages Technologies Insitutue (LTI)</a> and my advisor is <a href="http://mlsp.cs.cmu.edu/people/rsingh/index.php" target="_blank">Rita Singh</a>.
+				I graduated with a Computer Science degree, minoring in Mathematical 
+				Sciences, from <a href="http://cs.cmu.edu">Carnegie Mellon University</a> 
+				in December 2016. 
+			</p>
+			<!--
             <p>
 
-                I have different interests within different fields. I take pleasure in solving 
-                machine learning and deep learning problems. I also take pleasure in designing and building distributed systems and developing modern web applications. 
+                I have different interests within different fields. I take pleasure in solving machine learning and deep learning problems. I also take pleasure in designing and building distributed systems and developing modern web applications.
             </p>
-
+			-->
         </div>
         <hr>
         <div class="col-6 parag" id="projects">
@@ -86,14 +92,20 @@
     <script src="https://use.fontawesome.com/556f314754.js"></script>
     <script src="assets/js/custom-script.js"></script>
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-43269515-1', 'auto');
         ga('send', 'pageview');
     </script>
 </body>
-
 </html>
