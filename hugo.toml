@@ -1,0 +1,19 @@
+baseURL = 'https://mahmoudalismail.com'
+languageCode = 'en-us'
+title = "Mahmoud's Website"
+theme = "paper"
+
+[params]
+  name = "Mahmoud"
+  bio = "Welcome to my homepage, where I share my learnings, ideas, and thoughts."
+
+[menus]
+  [[menus.main]]
+    name = "About"
+    url = "/about/"
+    weight = 1
+
+  [[menus.main]]
+    name = "Notes"
+    url = "/posts/"
+    weight = 2

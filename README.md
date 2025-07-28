@@ -1,6 +1,5 @@
-Mahmoud Alismail
-==================
+Personal Website
+================
 
-This is Mahmoud Alismail personal portfolio. I am available in December 2016 for full-time employment. Please do not hesitate to contact me. 
-
+This is my personal website and place where I share my reading notes and other thoughts.
 
