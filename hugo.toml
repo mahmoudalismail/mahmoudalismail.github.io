@@ -1,11 +1,64 @@
 baseURL = 'https://mahmoudalismail.com'
 languageCode = 'en-us'
-title = "Mahmoud's Website"
-theme = "paper"
+title = "Mahmoud Alismail"
+theme = "PaperMod"
+enableRobotsTXT = true
+canonifyURLs = true
+
+[pagination]
+  pagerSize = 10
 
 [params]
-  name = "Mahmoud"
-  bio = "Welcome to my homepage, where I share my learnings, ideas, and thoughts."
+  author = "Mahmoud"
+  description = "Personal site of Mahmoud"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  hideFooter = false
+  comments = false
+  env = "production"
+  homeInfoParams = { Title = "Hi, I'm Mahmoud 👋", Content = "This site is my place to share notes, ideas, and experiments." }
+  # Keep homepage minimal
+  mainSections = []
+
+  # images = ["images/og-default.png"]
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/malismail"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/mahmoudalismail"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+[params.assets]
+  # Standard favicon
+  favicon = "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>"
+  # 16×16
+  favicon16x16 = "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22><text y=%2212%22 font-size=%2212%22>🎧</text></svg>"
+  # 32×32
+  favicon32x32 = "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22><text y=%2224%22 font-size=%2224%22>🎧</text></svg>"
+  # Apple Touch Icon
+  apple_touch_icon = "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22180%22 height=%22180%22><text y=%22140%22 font-size=%22140%22>🎧</text></svg>"
+  # Safari pinned tab (mask icon)
+  safari_pinned_tab = "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>"
+
+[services]
+  [services.googleAnalytics]
+    id = "G-YK5MK41MFF"
+  
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true  # Allows raw HTML (iframes/SVG). Set false if not needed.
 
 [menus]
   [[menus.main]]

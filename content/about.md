@@ -1,19 +1,15 @@
 ---
 title: "About"
-date: 2025-01-01
+date: 2025-09-25
 draft: false
 ---
 
-Welcome to my personal website! I'm Mahmoud, and this is where I share my learnings, ideas, and thoughts.
+## About
 
-## What You'll Find Here
+Welcome! I'm **Mahmoud**, and this site is my digital space for sharing ideas, learnings, and experiments. My background is in Computer Science, with experience in Machine Learning, Speech, and Audio. I would expect content covering these topics, along with occasional thoughts on books I read, productivity, and other interests.
 
-This site serves as my digital space where I document my journey, insights, and experiences. Whether it's technical discoveries, personal reflections, or interesting ideas I've encountered, you'll find them in my notes section.
+This website has been online since 2014 but hasn't seen much activity or content until recently. Some of the notes you will find here go back a while. I have been gradually collecting and publishing them online so they’re easier to share and revisit. They reflect both older explorations and current projects.  
 
-## Get in Touch
+If you spot a typo, have feedback, or would like to collaborate, feel free to reach me at **[hello@mahmoudalismail.com](mailto:hello@mahmoudalismail.com)**.  
 
-Feel free to explore my notes and reach out if you'd like to connect or discuss any of the topics I've written about.
-
----
-
-Thank you for visiting!
+Thanks for visiting, and I hope you find something useful or inspiring here!  
