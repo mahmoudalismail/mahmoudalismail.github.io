@@ -1,11 +1,7 @@
 ---
 title: "About"
-url: "/about/"
-date: 2025-09-25
 draft: false
 ---
-
-## About
 
 Welcome! I'm **Mahmoud**, and this site is my digital space for sharing ideas, learnings, and experiments. My background is in Computer Science, with experience in Machine Learning, Speech, and Audio. I would expect content covering these topics, along with occasional thoughts on books I read, productivity, and other interests.
 
