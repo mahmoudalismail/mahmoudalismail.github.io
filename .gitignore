@@ -1,8 +1,15 @@
+# Hugo build output (handled by GitHub Actions artifact)
+public/
+
+# Hugo build lock file
+.hugo_build.lock
+
 # OSX
 
 .DS_Store
 .AppleDouble
 .LSOverride
+Thumbs.db
 
 # Icon must end with two \r
 Icon
