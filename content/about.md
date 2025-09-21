@@ -1,5 +1,6 @@
 ---
 title: "About"
+url: "/about/"
 date: 2025-09-25
 draft: false
 ---
